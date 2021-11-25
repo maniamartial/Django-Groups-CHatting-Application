@@ -29,7 +29,7 @@ def register(request):
 
 # def logout(request):
  #   pass
-@login_required
+'''@login_required
 def profile(request):
     if request.method == 'POST':
 
@@ -49,4 +49,4 @@ def profile(request):
         'u_form': u_form,
         'p_form': p_form
     }
-    return render(request, 'users/profile.html', context)
+    return render(request, 'users/profile.html', context)'''

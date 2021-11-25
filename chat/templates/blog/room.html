@@ -1,7 +1,23 @@
 {%extends 'blog/base.html' %} {% load crispy_forms_tags%} {%block content%}
 <textarea id="chat-log" cols="100" rows="20"></textarea><br />
-<input id="chat-message-input" type="text" size="100" /><br />
-<input id="chat-message-submit" type="button" value="Send" />
+
+<div class="input-group mb-3">
+  <input
+    id="chat-message-input"
+    type="text"
+    class="form-control"
+    aria-label="Recipient's username"
+    aria-describedby="basic-addon2"
+  />
+  <div class="input-group-append">
+    <input
+      id="chat-message-submit"
+      type="button"
+      value="Send"
+      class="input-group-text"
+    />
+  </div>
+</div>
 {{ room_name|json_script:"room-name" }}
 <script>
   const roomName = JSON.parse(document.getElementById("room-name").textContent);
